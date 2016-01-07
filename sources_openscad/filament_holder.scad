@@ -7,7 +7,6 @@ Designed for:
 - two ## mm M4 Screws for mounting
 */
 
-
 $fn=48;
 
 module bearing(ID,OD,W) {
