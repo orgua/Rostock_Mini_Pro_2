@@ -1,3 +1,13 @@
+/*
+Info: 
+
+Improvement:
+- fin offers extra stability during the print (4 mounting screws instead of 2)
+- direct platform for small hal-sensor-pcb
+- 
+
+*/
+
 idler_end_height = 30;
 
 include <bracket.scad>

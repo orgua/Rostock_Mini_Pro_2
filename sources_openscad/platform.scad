@@ -1,3 +1,16 @@
+/*
+Info:
+
+Improvement:
+- none so far
+
+TODO: 
+- include cooling
+- include z-probe
+- include mount for led-ring
+
+*/
+
 platform_hinge_offset = 32;
 platform_thickness = 8;
 

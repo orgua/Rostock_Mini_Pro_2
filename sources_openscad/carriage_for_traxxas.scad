@@ -1,11 +1,20 @@
-carriage_height = 24;
-carriage_hinge_offset = 22.5;
+/* 
+Info: 
+Allows the mounting of magnets (3mm) for the hal-sensor in the idler. Use the extra belt_mounts with zip-ties to fix the open ends of the gt2-belt directly to the carriage. 
 
-/*
+Improvement: 
+- direct mounting of open belt-ends 
+- groves prevent secure belt-mount
+- 
+
 TODO: 
 - move belt-mount to defined distance from middle (reduce error)
-- allow for two lm8uu per rod
+- allow two lm8uu per rod (extra stability)
+
 */
+
+carriage_height = 24;
+carriage_hinge_offset = 22.5;
 
 width = 76;
 height = carriage_height;

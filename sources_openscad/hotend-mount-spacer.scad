@@ -1,3 +1,12 @@
+/*
+Two of these spacers are placed between platform and hotend-mount.
+
+Improvement: 
+- offers an offset for the hotend-mount
+- the fan of the E3D-Hotend fits between mount and platform 
+
+*/
+
 $fn=48;
 
 module round_cube(x,y,z,r) 

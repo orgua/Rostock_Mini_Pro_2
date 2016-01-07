@@ -1,6 +1,16 @@
-include <bracket.scad>
+/*
+Info:
+This design fits a nema17. You should print this with support, so that you get a clean motor-hole. Otherwise you could comment-out code below - look for "printable without support".
 
-// TODO: resize part, for some air above and below the motor
+Improvement:
+- better fin-design
+- included space for nuts 
+
+TODO: 
+- resize part, for some air above and below the motor
+*/
+
+include <bracket.scad>
 
 motor_front_dimension = 42;
 motor_front_hole_radius = 11.3;

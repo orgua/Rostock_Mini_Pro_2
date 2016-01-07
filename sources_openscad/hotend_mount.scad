@@ -1,5 +1,15 @@
-// you need two of these, 180° rotated (see last line)
-// suitable for E3D-Hotends
+/*
+Info:
+You need two of these, 180° rotated (see last line) to mount your hotend. It is suitable for (and tested with) E3D-Hotends.
+
+Improvement:
+- much more sturdy
+- you can put your heater/fan/tempsensor-cable through the cutout
+
+TODO: 
+- 
+
+*/
 
 $fn=64;
 
