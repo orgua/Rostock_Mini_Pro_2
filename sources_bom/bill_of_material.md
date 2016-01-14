@@ -26,6 +26,7 @@
 - 1x RAMPS 1.4 Assembled (modified for laptop charger) 	http://www.ebay.de/itm/3D-Drucker-Kit-Mega-2560-R3-RAMPS-1-4-5x-DRV8825-3D-Printer-Prusa-Reprap-/272039524081?hash=item3f56d1b6f1:g:cTUAAOSwYHxWPmXR
 - Arduino Mega (came with RAMPS)
 - Drv8825 1.5A	(came with RAMPS)
+   - alternative: https://github.com/watterott/SilentStepStick
 - 3x Nema 17 Motor http://www.ebay.de/itm/DE-Ship-3PCS-59Ncm-Nema-17-Stepper-Motor-2A-1m-Cable-DIY-3D-Printer-CNC-Robot-/231657705581?hash=item35efe0106d:g:GmkAAOSwyQtVzZDH
 - 1x Nema 17 Motor coupled with Planetary Gearbox 5.2:1 http://de.aliexpress.com/item/New-Best-Gear-ratio-5-1-Planetary-Gearbox-stepper-motor-Nema-17-1-68A-Geared-Stepper/2032350540.html?ws_ab_test=searchweb201556_3_79_78_77_91_80,searchweb201644_5,searchweb201560_9
    - alternative: nema 17 without gearbox
