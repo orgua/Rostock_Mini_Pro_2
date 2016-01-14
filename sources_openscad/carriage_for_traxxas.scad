@@ -3,18 +3,19 @@ Info:
 Allows the mounting of magnets (3mm) for the hal-sensor in the idler. Use the extra belt_mounts with zip-ties to fix the open ends of the gt2-belt directly to the carriage. 
 
 Improvement: 
-- direct mounting of open belt-ends 
-- groves prevent secure belt-mount
-- 
+- direct mounting of open belt-ends with zip-ties (with belt_mount_for_carriage.scad) 
+- groves secure belt-mount 
+- move belt-mount to defined distance from middle (reduce error) --> belt_mount_offset
+- allow two lm8uu per rod (extra stability) --> carriage_extra_height
 
 TODO: 
-- move belt-mount to defined distance from middle (reduce error)
-- allow two lm8uu per rod (extra stability)
 
 */
 
 carriage_height = 24;
+carriage_extra_height = 24;
 carriage_hinge_offset = 22.5;
+belt_mount_offset = 8; // "outer" side as reference
 
 width = 76;
 height = carriage_height;
@@ -50,7 +51,7 @@ module parallel_joints(reinforced) {
     translate([0, 2, 0]) cylinder(r=middle, h=100, center=true);
     translate([0, -8, 0]) cube([2*middle, 20, 100], center=true);
 
-    rotate([0,90,0]) rotate([0,0,30]) cylinder(r=3.3, h=29, center=true,$fn=6);
+    rotate([0,90,0]) cylinder(r=3.3, h=29, center=true,$fn=6);
   }
   
   //added features for Traxxas U-joints
@@ -86,20 +87,21 @@ module lm8uu_mount(d, h) {
 module belt_mount() {
     union() {
       difference() {
-        translate([8, 5, 0]) cube([4, 19, height], center=true);
-        for (x = [6,10]) for (z = [-10:2:+10])
+        translate([0, 5, 0]) cube([4, 19, height], center=true);
+        for (x = [-2,2]) for (z = [-10:2:+10])
             translate([x, 6, z]) rotate([90,0,0]) cylinder(d=1, h=10, center=true);
         for (y = [1,11]) for (z = [-8,+8]) 
-            translate([8,y,z]) rotate([0,90,0]) cylinder(d=3.3, h=6, center=true);
+            translate([0,y,z]) rotate([0,90,0]) cylinder(d=3.3, h=6, center=true);
       }
    }
 }
 
 module carriage() {
   union() {
+    hExt = carriage_extra_height;
     for (x = [-30, 30])
-      translate([x, 0, 0]) lm8uu_mount(d=15.2, h=24);
-    belt_mount();
+      translate([x, 0, hExt/2]) lm8uu_mount(d=15.2, h=height+hExt);
+      translate([belt_mount_offset-2, 0, 0]) belt_mount();
     difference() {
       union() {
         translate([0, -5.6, 0]) cube([50, 5, height], center=true);
