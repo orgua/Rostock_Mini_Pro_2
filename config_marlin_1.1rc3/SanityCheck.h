@@ -229,7 +229,7 @@
     #endif
 
     #if ENABLED(Z_MIN_PROBE_REPEATABILITY_TEST)
-      #error Z_MIN_PROBE_REPEATABILITY_TEST is not supported with DELTA yet.
+      //#error Z_MIN_PROBE_REPEATABILITY_TEST is not supported with DELTA yet.
     #endif
 
   #endif
