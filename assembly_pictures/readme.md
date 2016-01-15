@@ -1,7 +1,7 @@
 Pictures in progress!
 
-![Front](/DSC08004.jpg)
+![Front](/assembly_pictures/DSC08004.jpg)
 
-![TOP](/DSC07994.jpg)
+![TOP](/assembly_pictures/DSC07994.jpg)
 
-![DETAIL](/DSC07998.jpg)
+![DETAIL](/assembly_pictures/DSC07998.jpg)
