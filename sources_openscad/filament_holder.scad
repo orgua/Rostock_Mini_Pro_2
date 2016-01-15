@@ -5,6 +5,13 @@ Designed for:
 - two 625ZZ-Bearings 
 - two ## mm M5 Screws and nuts (optional) for the bearings
 - two ## mm M4 Screws for mounting
+
+Improvement:
+- wasn't there before
+
+TODO: 
+- 
+
 */
 
 $fn=48;

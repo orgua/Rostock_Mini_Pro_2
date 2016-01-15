@@ -1,3 +1,15 @@
+/* 
+Info: 
+This part is just a template for the other parts of the linear drive.
+
+Improvement: 
+- diagonal fin is parametrised and reusable
+
+TODO: 
+- remove screw-models --> put in extra-file
+
+*/
+
 rod_distance = 60; // Smooth rod distance (center to center)
 rod_hole_radius = 8.4/2;
 
@@ -75,4 +87,4 @@ module bracket(height) {
   }
 }
 
-//translate([0, 0, 10]) bracket(20);
+translate([0, 0, 10]) bracket(20);

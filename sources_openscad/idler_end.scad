@@ -1,10 +1,13 @@
 /*
 Info: 
+This part sits at the upper end of the rods, below the top-plate. You need 3 of these.
 
 Improvement:
-- fin offers extra stability during the print (4 mounting screws instead of 2)
-- direct platform for small hal-sensor-pcb
-- 
+- fins offers extra stability during the print (4 mounting screws instead of 2)
+- direct mounting-platform for small hal-sensor-pcb
+
+TODO: 
+- give information on the hal-sensor-project
 
 */
 

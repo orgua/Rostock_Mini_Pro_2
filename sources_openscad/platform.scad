@@ -1,5 +1,6 @@
 /*
 Info:
+This part mounts the hotend, z-Probe, ring-light and other stuff you need. You need just 1 of this. 
 
 Improvement:
 - none so far

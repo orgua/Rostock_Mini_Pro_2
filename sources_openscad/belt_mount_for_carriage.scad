@@ -1,8 +1,9 @@
 /*
 Info:
-see carriage_traxxas
+You can mount the open ends of the belt directly to see cariage. look at carriage_for_traxxas for more information. You need these 6 pieces.
 
 Improvement:
+- mounting the belt was a mess before
 
 TODO: 
 
@@ -33,5 +34,5 @@ module anti_belt_mount_S() {
    }
 }
 
-for (x = [0:8:(6*8)])
+for (x = [0:8:(5*8)])
     translate([x,00,0]) anti_belt_mount_S();

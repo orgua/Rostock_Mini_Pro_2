@@ -1,3 +1,10 @@
+/*
+
+This file is just for debug and shows the parts of the linear drive compiled in one view.
+
+*/
+
+
 use <motor_end.scad>
 use <carriage_for_traxxas.scad>
 use <idler_end.scad>

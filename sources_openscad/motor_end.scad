@@ -1,13 +1,14 @@
 /*
 Info:
-This design fits a nema17. You should print this with support, so that you get a clean motor-hole. Otherwise you could comment-out code below - look for "printable without support".
+This design fits a nema17. You should print this with support, so that you get a clean motor-hole. Otherwise you could comment-out code below - look for "printable without support". You need 3 of these
 
 Improvement:
 - better fin-design
-- included space for nuts 
+- included space / cutout for nuts 
 
 TODO: 
 - resize part, for some air above and below the motor
+
 */
 
 include <bracket.scad>

@@ -9,6 +9,7 @@ Improvement:
 - allow two lm8uu per rod (extra stability) --> carriage_extra_height
 
 TODO: 
+- zip-tie hold the "new" lm8uu 
 
 */
 

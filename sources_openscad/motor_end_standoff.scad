@@ -1,6 +1,6 @@
 /*
 Info: 
-You can put six of these under/in the motor_mounts in the rod-holes. I printed these with a soft PLA and put an 40mm M3-Screw inside.  
+You can put six of these under/in the motor_mounts in the rod-holes. I printed these with a soft PLA and put a 40mm M3-Screw inside. You need 6 of these.
 
 Improvement: 
 - better cooling for motors
