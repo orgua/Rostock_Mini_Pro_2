@@ -2,14 +2,15 @@
 
 This project offers an improved, redesigned and cleaned fork of the original sources:
 - Rostock Mini Pro (CZAR) http://www.thingiverse.com/thing:318971
-- Rostock Mini (www.thingiverse.com/thing:32850/)
+- Rostock Mini http://www.thingiverse.com/thing:32850/ 
 
 Improvements in comparison to the Mini Pro:
-- code base reworked
+- openSCAD-code base reworked
    - more modular design and parametrized
    - better documentation
    - cleaner code, no missing dependencies, less dead code
-- include bill of material
+- included bill of material
+- included marlin-config (for orientation)
 - more space under the printer (there is just usb and power coming out of mine)
    - this design allows shorter wires to the motores and results in better EMC
    - shock absorbing standoffs (if printed with soft PLA)
