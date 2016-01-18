@@ -6,20 +6,22 @@ This project offers an improved, redesigned and cleaned fork of the original sou
 
 Improvements in comparison to the Mini Pro:
 - openSCAD-code base reworked
-   - more modular design and parametrized
+   - more modular design and parametrized blocks
    - better documentation
    - cleaner code, no missing dependencies, less dead code
-- included bill of material
+- included bill of material and links (for orientation)
 - included marlin-config (for orientation)
 - more space under the printer (there is just usb and power coming out of mine)
    - this design allows shorter wires to the motores and results in better EMC
    - shock absorbing standoffs (if printed with soft PLA)
    - better cooling for motors
-- better stability, less wiggle, stiffer frame
-   - better fin-design for plate-connectors
-   - hotend-mount is much more sturdy 
+   - allows active cooling for motordrivers
+- better stability, less wiggle, stiffer frame, better printquality
+   - better fin-design for all plate-connecting parts
+   - desgin of hotend-mount is much more sturdy 
    - allow two lm8uu per rod (4 per carriage)
-- the fan of the E3D-Hotend fits between hotend-mount and platform 
+- the fan of the E3D-Hotend fits between hotend-mount and platform
+   - hotend is lifted and print-space in z-direction is bigger 
 - included space / cutout for nuts on more places
 - hal-sensor-endstops with better repeatability 
 - better cable-management
