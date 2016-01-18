@@ -17,7 +17,7 @@
 - 6x 8mm Hardened Zinc-coated Precision Rod (49cm) http://www.ebay.de/itm/161086182217
    - alternative: standard rod 8mm (much cheaper)
 - 6x 3K Carbon Fiber Tubes (15cm), ri=4mm
-   - alternative: aluminum
+   - alternative: aluminum rod
 
 ### Electronics
 - 3x Endstopps - alternatives
@@ -25,14 +25,14 @@
    - alternative: magnet hal-sensors and 3x2mm neodym magnets --> TODO: add link to osh-park
 - 1x RAMPS 1.4 Assembled (modified for laptop charger) 	http://www.ebay.de/itm/272039524081
 - Arduino Mega (came with RAMPS)
-- Drv8825 1.5A	(came with RAMPS)
+- Drv8825 1.5A (came with RAMPS)
    - alternative: https://github.com/watterott/SilentStepStick
 - 3x Nema 17 Motor http://www.ebay.de/itm/231657705581
 - 1x Nema 17 Motor coupled with Planetary Gearbox 5.2:1 http://de.aliexpress.com/item//2032350540.html
    - alternative: nema 17 without gearbox
-- 1x 12V 10A Laptop Charger http://www.ebay.de/itm/151730872446
+- 1x 12V >=200W Laptop Charger http://www.ebay.de/itm/151730872446
 - heat-Plate MK3 Aluminum  http://www.ebay.de/itm/301500250401
-- temperature sensor (for heatbed and hotend) http://www.ebay.de/itm/271985790852
+- temperature sensor NTC 3950 100k (for heatbed and hotend) http://www.ebay.de/itm/271985790852
 
 ### Printer-Specific Parts: 
 - E3D Volcano Clone http://de.aliexpress.com/item//32444293847.html
@@ -44,7 +44,7 @@
 
 ### Various:
 - >30x 3mm Zip-ties 			
-- Bolts, Nuts, Screws & washer: M3 M4 M5 M8	
+- Bolts, Nuts, Screws & washer: M3 M4 M5 M8	--> buy from you local hw-store
    - the following part-counts may be wrong by now		
    - M2.5
       - 12mm 6x
