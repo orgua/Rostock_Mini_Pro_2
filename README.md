@@ -28,7 +28,7 @@ Improvements in comparison to the Mini Pro:
 - includes a filament-holder on top of the printer
 - direct mounting at carriage of open belt-ends with zip-ties (with belt_mount_for_carriage.scad) 
    - groves secure belt-mount 
-
+- built in power-switch next to the headbed
 
 Still to do: 
 - include cooling into platform

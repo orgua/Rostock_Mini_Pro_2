@@ -33,6 +33,7 @@
 - 1x 12V >=200W Laptop Charger http://www.ebay.de/itm/151730872446
 - heat-Plate MK3 Aluminum  http://www.ebay.de/itm/301500250401
 - temperature sensor NTC 3950 100k (for heatbed and hotend) http://www.ebay.de/itm/271985790852
+- power-switch https://www.conrad.de/de/wippschalter-250-vac-10-a-2-x-ausein-sci-r13-244b-02-br-220-vac-rastend-1-st-701001.html
 
 ### Printer-Specific Parts: 
 - E3D Volcano Clone http://de.aliexpress.com/item//32444293847.html
