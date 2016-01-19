@@ -1,6 +1,6 @@
 
 ### Case:
-- 1x Acrylic Top Plate --> e.g. Formulor Lasercut
+- 1x Acrylic Top Plate --> e.g. Formulor Lasercut (http://www.formulor.de/)
 - 1x Acrylic Bottom Plate --> e.g. Formulor Lasercut
 - 16x Rostock Mini Pro Printed Parts --> print with a printer of a friend (RepRap-Style) or use shapeways
 
@@ -67,7 +67,7 @@
 
 ### Optional: 
 - Fans:	40mm, 120mm for cooling RAMPS-Board and the printed body http://www.ebay.de/itm/151644447282
-- Glas-plate on the Heat-bed (Alu-Heat-bed is not plane when hot) --> use from an old picture-frame
+- Glass-plate on the Heat-bed (Alu-Heat-bed is not plane when hot) --> use from an old picture-frame
 - 3x Belt Spring Tensioner http://www.ebay.de/itm/191732050982
 - z-probe 
    - optical: see above for sensor and google for allan key z probe
