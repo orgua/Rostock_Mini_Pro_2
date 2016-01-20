@@ -4,6 +4,10 @@ This project offers an improved, redesigned and cleaned fork of the original sou
 - Rostock Mini Pro (CZAR) http://www.thingiverse.com/thing:318971
 - Rostock Mini http://www.thingiverse.com/thing:32850/ 
 
+Used Software: 
+- OpenSCAD 2015.10.17 (http://www.openscad.org)
+- Inkscape 0.91 (https://inkscape.org)
+
 Improvements in comparison to the Mini Pro:
 - openSCAD-code base reworked
    - more modular design and parametrized blocks
@@ -11,6 +15,7 @@ Improvements in comparison to the Mini Pro:
    - cleaner code, no missing dependencies, less dead code
 - included bill of material and links (for orientation)
 - included marlin-config (for orientation)
+- included redesign of bottom and top plate (Inkscape svg)
 - more space under the printer (there is just USB and power coming out of mine)
    - this design allows shorter wires to the motors and results in better EMC
    - shock absorbing standoffs (if printed with soft PLA)
@@ -35,7 +40,7 @@ Still to do:
 - add more pictures
 - further optimize the code 
 - document hal-sensor-board
-- motor-mount: more space above the motor for better cooling
+- motor-mount: add more space above the motor for better cooling
 
 Pictures (in progress):
 
