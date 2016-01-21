@@ -3,7 +3,7 @@ Info:
 You need two of these, 180° rotated (see last line) to mount your hotend. It is suitable for (and tested with) E3D-Hotends.
 
 Improvement:
-- much more sturdy
+- much more sturdy than old design
 - you can put your heater/fan/tempsensor-cable through the cutout
 
 TODO: 
@@ -15,7 +15,8 @@ $fn=64;
 
 function signum(x) = (x < 0)?-1:(x > 0)?1:0; 
 
-module bowden_clamp() { 
+module bowden_clamp() 
+{ 
     difference() {
 	translate([0,0,-0]) linear_extrude(height=12,convexity=30,center=true) 
         difference() {
@@ -31,8 +32,8 @@ module bowden_clamp() {
 	
 	for(x=[-25,25]) {
         // M4 socket heads and mounting holes
-        translate([x,0,+4.5]) rotate([0,0,30]) cylinder(d=6.5,h=3.01,center=true, $fn=6); // d_M3 = 5.5 (see below)
-        translate([x,0,-4.5]) rotate([0,0,30]) cylinder(d=6.5,h=3.01,center=true, $fn=6);
+       translate([x,0,+4.5]) rotate([0,0,30]) cylinder(d=6.5,h=3.01,center=true, $fn=6); // d_M3 = 5.5 (see below)
+       translate([x,0,-4.5]) rotate([0,0,30]) cylinder(d=6.5,h=3.01,center=true, $fn=6);
        translate([x,0,0]) cylinder(d=3.5,h=15,center=true);
     }
 
@@ -55,7 +56,7 @@ module bowden_clamp() {
 		cube([4.2,8.2,13],center=true);
 		cylinder(r=2.2,h=13);
 	}
-    
+    // cut part in half
     rotate([0,0,18]) translate([-50,-0.5,-20]) cube([100,50,55]);
 }
 }

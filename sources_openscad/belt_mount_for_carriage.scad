@@ -12,7 +12,8 @@ TODO:
 $fn=48;
 
 // small version of this part
-module anti_belt_mount() {
+module anti_belt_mount() 
+{
     translate([0,0,4.5]) difference() 
     {
         cube([4, 17, 9], center=true);
@@ -21,7 +22,7 @@ module anti_belt_mount() {
             translate([x,0,z]) rotate([90,0,0]) cylinder(d=1.0, h=10,center=true);
         // mounting-holes for zip-ties
         for (y = [-5,+5]) 
-            translate([0,y,0]) rotate([0,90,0]) cylinder(d=3.3, h=06,center=true);
+            translate([0,y,0]) rotate([0,90,0]) cylinder(d=3.3, h= 6,center=true);
    }
 }
 
