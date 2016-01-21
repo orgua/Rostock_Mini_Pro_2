@@ -11,21 +11,22 @@ TODO:
 
 */
 
-include <bracket.scad>
-
-motor_front_dimension = 42;
-motor_front_hole_radius = 11.3;
+motor_front_dimension         = 42;
+motor_front_hole_radius       = 11.3;
 motor_mounting_screw_distance = 31;
-motor_mounting_screw_radius = M3_screw_hole_dia/2;
 
 part_extraheight = 0;
 
 $fn=36;
 
+include <bracket.scad>
+include <misc_parts.scad>
+
+// negative parts that get substracted
 module motor_holes() {
     sh = 10;
     sd = motor_mounting_screw_distance/2;
-    sr = motor_mounting_screw_radius; 
+    sr = M3_screw_hole_dia/2; 
     cylinder(r=motor_front_hole_radius, h=sh, center=true); 
     // make it printable without support!
     //translate([0,8,+(motor_front_hole_radius+1)/2]) rotate([0,0,45]) cube(motor_front_hole_radius, center=true);

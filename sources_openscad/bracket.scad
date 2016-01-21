@@ -4,42 +4,31 @@ This part is just a template for the other parts of the linear drive.
 
 Improvement: 
 - diagonal fin is parametrised and reusable
+- remove screw-models --> put in misc-parts
 
 TODO: 
-- remove screw-models --> put in extra-file
-
+- 
 */
 
-rod_distance = 60; // Smooth rod distance (center to center)
+rod_distance    = 60; // Smooth rod distance (center to center)
 rod_hole_radius = 8.4/2;
 
-M3_screw_hole_dia = 3.4;
-M3_nut_hole_dia = 6.2+0.2;
-
-M4_screw_hole_dia = 4.4;
-M4_nut_hole_dia = 7.7+0.2;
 
 $fn = 36;
 $fa = 12;
 $fs = 0.5;
 
-module screw_M3(length) {
-    cylinder(d=M3_screw_hole_dia, h=length);
-	cylinder(d=M3_nut_hole_dia, h=2.3, center=true, $fn=6);
-}
-
-module screw_M4(length) {
-    cylinder(d=M4_screw_hole_dia, h=length);
-	cylinder(d=M4_nut_hole_dia, h=3.3, center=true, $fn=6);
-}
+include <misc_parts.scad>
 
 
+//// fin-module
+// height1: front of fin
+// height2: back of fin
+// length1: length all together
+// length2: length of the fin-part that gets merged in the adjacent part
+// width:   ....
 module diagonal_fin2(height1, height2, length1, length2, width) 
 {
-    // height1: front side of fin
-    // height2: back side of fin
-    // length1: length all together
-    // length2: of the "sinking" part
     ds = 3; // =y0, distance from the endpoints
     y1 = (length1-length2)/2;
     y2 = (length1+length2)/2;
@@ -87,4 +76,4 @@ module bracket(height) {
   }
 }
 
-translate([0, 0, 10]) bracket(20);
+//translate([0, 0, 10]) bracket(20);
