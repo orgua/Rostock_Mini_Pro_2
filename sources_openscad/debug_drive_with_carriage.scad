@@ -4,7 +4,7 @@ This file is just for debug and shows the parts of the linear drive compiled in 
 
 */
 
-r=180; // rotate this part one half turn
+r=180; // rotate affected parts one half turn
 
 $fn=48;
 

@@ -21,25 +21,27 @@ $fn=60;
 
 module motor_end_standoff()
 {
-  difference() 
-  {
-    union() 
-    {  
-        translate([0,0,+h_rod/2])   cylinder(d=d_rod,  h=h_rod+2,center=true);
-        translate([0,0,-h_stand/2]) cylinder(d=d_stand,h=h_stand,center=true);
-    }
-    w_cube = (d_stand - d_rod);
-    // generate flat surfaces on each side
-    translate([0,+(d_stand/2+1),  -h_stand/2]) cube([d_stand,w_cube,h_stand+2], center=true);
-    translate([0,-(d_stand/2+2.5),-h_stand/2]) cube([d_stand,w_cube,h_stand+2], center=true);
-    translate([+(d_stand/2+2.5),0,-h_stand/2]) cube([w_cube,d_stand,h_stand+2], center=true);
-    translate([-(d_stand/2+2.5),0,-h_stand/2]) cube([w_cube,d_stand,h_stand+2], center=true);
+    difference() 
+    {
+        union() 
+        {  
+            translate([0,0,+h_rod/2])   cylinder(d=d_rod,  h=h_rod+2,center=true);
+            translate([0,0,-h_stand/2]) cylinder(d=d_stand,h=h_stand,center=true);
+        }
+        
+        w_cube = (d_stand - d_rod);
+        
+        // generate flat surfaces on each side
+        translate([0,+(d_stand/2+1),  -h_stand/2]) cube([d_stand,w_cube,h_stand+2], center=true);
+        translate([0,-(d_stand/2+2.5),-h_stand/2]) cube([d_stand,w_cube,h_stand+2], center=true);
+        translate([+(d_stand/2+2.5),0,-h_stand/2]) cube([w_cube,d_stand,h_stand+2], center=true);
+        translate([-(d_stand/2+2.5),0,-h_stand/2]) cube([w_cube,d_stand,h_stand+2], center=true);
     
-    // make room to insert screws inside the standoff
-    translate([0,0,-h_stand])     cylinder(d=6,h=8,center=true);
-    translate([0,0,-h_stand+5.9]) cylinder(d1=6,d2=3.3,h=4,center=true);
-    translate([0,0,-h_stand/2+h_rod/2]) cylinder(d=3.3,h=h_stand+h_rod+4, center=true);
-  }
+        // make room to insert screws inside the standoff
+        translate([0,0,-h_stand])     cylinder(d=6,h=8,center=true);
+        translate([0,0,-h_stand+5.9]) cylinder(d1=6,d2=3.3,h=4,center=true);
+        translate([0,0,-h_stand/2+h_rod/2]) cylinder(d=3.3,h=h_stand+h_rod+4, center=true);
+    }
 }
 
 motor_end_standoff();

@@ -38,27 +38,28 @@ module led_ring()
 
 module platform() 
 {
-  translate([0, 0, h/2]) difference() 
-  {
-    
-    // the organic triangular shape
-	union() 
+    translate([0, 0, h/2]) difference() 
     {
-      for (a = [0:2]) rotate(a*120)        
-      {
-        translate([0, -platform_hinge_offset, 0]) parallel_joints();
-        // Close little triangle holes.
-        translate([0, 31, 0]) cylinder(r=5, h=h, center=true);
-      }
     
-      // the big cylinder in the middle  
-      cylinder(r=30, h=h, center=true);
+        // the organic triangular shape
+        union() 
+        {
+            for (a = [0:2]) rotate(a*120)        
+            {
+                translate([0, -platform_hinge_offset, 0]) parallel_joints();
+                // Close little triangle holes.
+                translate([0, 31, 0]) cylinder(r=5, h=h, center=true);
+            }
+    
+            // the big cylinder in the middle  
+            cylinder(r=30, h=h, center=true);
+        }
+        
+        cylinder(r=20, h=h+12, center=true);
+        // set of mounting-holes
+        for (a = [0:5]) 
+            rotate(a*60) translate([0, -25, 0]) cylinder(r=2.2, h=h+1, center=true);
     }
-    cylinder(r=20, h=h+12, center=true);
-    // set of mounting-holes
-    for (a = [0:5]) 
-      rotate(a*60) translate([0, -25, 0]) cylinder(r=2.2, h=h+1, center=true);
-  }
 }
 
 platform();

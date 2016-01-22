@@ -10,11 +10,11 @@ Improvement:
 - wasn't there before
 
 TODO: 
-- 
-
+- better documentation
+- strengthen role of hF
 */
 
-hF = 18; // height of filament
+hF = 18; // height of filament --> is not choosable, just as information
 
 $fn=48;
 
@@ -37,31 +37,32 @@ module groundplate(height)
 
 module filament_holder() 
 {
-    difference() {
-    union() {
-    difference() {
-        groundplate(6);
-        translate([+5, +8.5, hF-8]) rotate([90,0,0]) cylinder(d=18,h= 4,center=true);
-    }
+    difference() 
+    {
+        union() 
+        {
+            difference() 
+            {
+                groundplate(6);
+                translate([5,8.5,hF-8]) rotate([90,0,0]) cylinder(d=18,h=4,center=true);
+            }
 
-    translate([+5, 7.5, hF-8]) rotate([90,0,0]) cylinder(d1=8.5, d2=12,h= 2.01,center=true);
-    translate([-5, 2.0, 15+1]) rotate([00,0,0]) cylinder(d2=8.5, d1=12,h= 2.01,center=true);
+            translate([+5,7.5,hF-8]) rotate([90,0,0]) cylinder(d1=8.5,d2=12,h=2.01,center=true);
+            translate([-5,2.0,15+1]) rotate([00,0,0]) cylinder(d2=8.5,d1=12,h=2.01,center=true);
     
-    translate([+5, -0.75, hF-8]) rotate([90,0,0]) cylinder(d=12,h= 14.5,center=true);
-    translate([-5, +2.00, 7.5])  rotate([00,0,0]) cylinder(d=12,h=15,center=true);
-    
+            translate([+5,-0.75,hF-8]) rotate([90,0,0]) cylinder(d=12,h=14.5,center=true);
+            translate([-5,+2.00,7.5])  rotate([00,0,0]) cylinder(d=12,h=15,center=true);
+        }
+
+        translate([+5, 10, hF-8]) rotate([90,0,0]) cylinder(d=4.8,h=50,center=true);
+        translate([-5,  2,   15]) rotate([00,0,0]) cylinder(d=5.1,h=50,center=true);
+
+        translate([+15, 0, 0]) rotate([00,0,0]) cylinder(d=4.3,h=40,center=true);
+        translate([-15, 0, 0]) rotate([00,0,0]) cylinder(d=4.3,h=40,center=true);
+
+        translate([+5, -5, hF-8]) rotate([90,0,0]) cylinder(d=9.5,h=6.1,center=true,$fn=6);
+        translate([-5, +2, 3])    rotate([00,0,0]) cylinder(d=9.5,h=6.1,center=true,$fn=6);
     }
-
-translate([+5,10, hF-8]) rotate([90,0,0]) cylinder(d=4.8,h=50,center=true);
-translate([-5, 2,   15]) rotate([00,0,0]) cylinder(d=5.1,h=50,center=true);
-
-translate([+15, 0,0]) rotate([00,0,0]) cylinder(d=4.3,h=40,center=true);
-translate([-15, 0,0]) rotate([00,0,0]) cylinder(d=4.3,h=40,center=true);
-
-translate([+5, -5, hF-8]) rotate([90,0,0]) cylinder(d=9.5,h=6.1,center=true,$fn=6);
-translate([-5, +2, 3])  rotate([00,0,0]) cylinder(d=9.5,h=6.1,center=true,$fn=6);
-
-}
 }
 
 filament_holder();
