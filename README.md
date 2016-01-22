@@ -1,4 +1,4 @@
-# Rostock_Mini_Pro_2
+# RepRap Delta Rostock Mini Pro 2
 
 This project offers an improved, redesigned and cleaned fork of the original sources:
 - Rostock Mini Pro (CZAR) http://www.thingiverse.com/thing:318971
