@@ -1,6 +1,8 @@
 # RepRap Delta Rostock Mini Pro 2
 
-### This project offers an improved, redesigned and cleaned fork of the original sources:
+This project offers an improved, redesigned and cleaned fork of the original sources.
+
+### Based on the following projects:
 - Rostock Mini Pro (CZAR) [thingiverse](http://www.thingiverse.com/thing:318971)
 - Rostock Mini (bwevans) [thingiverse](http://www.thingiverse.com/thing:32850/) 
 - Rostock (Johann) [thingiverse](http://www.thingiverse.com/thing:17175), [github](https://github.com/jcrocholl/rostock)

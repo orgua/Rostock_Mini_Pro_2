@@ -1,6 +1,6 @@
 # Bill of Material
 
-### Case:
+### Frame / Case:
 - Top & Bottom Plate 
    - 1x Acrylic Top Plate --> e.g. [Formulor Lasercut](http://www.formulor.de/)
    - 1x Acrylic Bottom Plate --> e.g. Formulor Lasercut
@@ -23,12 +23,13 @@
    - alternative: aluminum tube (hardware store)
 
 ### Electronics
-- 3x Endstopps - alternatives
+- 3x Endstopps - choose alternative:
+   - magnet hal-sensors and 3x2mm neodym magnets --> TODO: add link to osh-park
    - optical: [Ebay](http://www.ebay.de/itm/311406937622)
-   - alternative: magnet hal-sensors and 3x2mm neodym magnets --> TODO: add link to osh-park
+   - mechanical switch
 - 1x RAMPS 1.4 Assembled (modified for laptop charger) 	[Ebay](http://www.ebay.de/itm/272039524081)
 - Arduino Mega (came with RAMPS)
-- Drv8825 1.5A (came with RAMPS)
+- Motordriver Drv8825 1.5A (came with RAMPS)
    - alternative: [Git](https://github.com/watterott/SilentStepStick)
 - 3x Nema 17 Motor [Ebay](http://www.ebay.de/itm/231657705581)
 - 1x Nema 17 Motor coupled with Planetary Gearbox 5.2:1 [Ali](http://de.aliexpress.com/item//2032350540.html)
@@ -47,7 +48,7 @@
 - Bowden-1.75mm	Ptfe teflon tube 2x4 mm [Ebay](http://www.ebay.de/itm/151603485581)
 - Push Fitting	PC4-M6 [Ebay](http://www.ebay.de/itm/151603549528)
 
-### Various:
+### Misc:
 - >30x 3mm Zip-ties (hardware store)			
 - Bolts, Nuts, Screws & washer: M3 M4 M5 M8	(hardware-store)
    - the following part-counts may be wrong by now		
