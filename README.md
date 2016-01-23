@@ -1,23 +1,23 @@
 # RepRap Delta Rostock Mini Pro 2
 
-This project offers an improved, redesigned and cleaned fork of the original sources:
+### This project offers an improved, redesigned and cleaned fork of the original sources:
 - Rostock Mini Pro (CZAR) [thingiverse](http://www.thingiverse.com/thing:318971)
 - Rostock Mini (bwevans) [thingiverse](http://www.thingiverse.com/thing:32850/) 
-- Rostock (Johann) [thingiverse](http://www.thingiverse.com/thing:17175) [github](https://github.com/jcrocholl/rostock)
+- Rostock (Johann) [thingiverse](http://www.thingiverse.com/thing:17175), [github](https://github.com/jcrocholl/rostock)
 
-Used Software: 
+### Used Software: 
 - [OpenSCAD](http://www.openscad.org) 2015.10.17 
 - [Inkscape](https://inkscape.org) 0.91 
 
-Improvements in comparison to the Mini Pro:
+### Improvements in comparison to the Mini Pro:
 - openSCAD-code base reworked
    - more modular design and more parametric
    - better documentation
    - cleaner code, no missing dependencies, less dead code
    - it's easier to make own mods
-- included bill of material and links (for orientation) [here](sources_bom/readme.md)
+- included [bill of material](sources_bom/readme.md) and links (for orientation)
 - included marlin-config (for orientation) 
-- included redesign of bottom and top plate (Inkscape svg) [here](sources_inkscape/readme.md)
+- included redesign of [bottom and top plate](sources_inkscape/readme.md) (Inkscape svg)
 - more space under the printer (there is just USB and power coming out of mine)
    - this design allows shorter wires to the motors and results in better EMC
    - shock absorbing standoffs (if printed with soft PLA)
@@ -37,14 +37,14 @@ Improvements in comparison to the Mini Pro:
    - groves secure belt-mount 
 - built in power-switch next to the heat-bed
 
-Still to do: 
+### Still to do: 
 - include cooling into platform
 - add more pictures
 - further optimize the code 
 - document hal-sensor-board
-- motor-mount: add more space above the motor for better cooling
+- motor-mount: add even more space above the motor for better cooling
 
-Pictures (in progress):
+### Pictures (in progress):
 
 ![Front](/assembly_pictures/DSC08004.jpg)
 
