@@ -1,21 +1,23 @@
 # RepRap Delta Rostock Mini Pro 2
 
 This project offers an improved, redesigned and cleaned fork of the original sources:
-- Rostock Mini Pro (CZAR) http://www.thingiverse.com/thing:318971
-- Rostock Mini http://www.thingiverse.com/thing:32850/ 
+- Rostock Mini Pro (CZAR) [thingiverse](http://www.thingiverse.com/thing:318971)
+- Rostock Mini (bwevans) [thingiverse](http://www.thingiverse.com/thing:32850/) 
+- Rostock (Johann) [thingiverse](http://www.thingiverse.com/thing:17175) [github](https://github.com/jcrocholl/rostock)
 
 Used Software: 
-- OpenSCAD 2015.10.17 (http://www.openscad.org)
-- Inkscape 0.91 (https://inkscape.org)
+- [OpenSCAD](http://www.openscad.org) 2015.10.17 
+- [Inkscape](https://inkscape.org) 0.91 
 
 Improvements in comparison to the Mini Pro:
 - openSCAD-code base reworked
-   - more modular design and parametrized blocks
+   - more modular design and more parametric
    - better documentation
    - cleaner code, no missing dependencies, less dead code
-- included bill of material and links (for orientation)
-- included marlin-config (for orientation)
-- included redesign of bottom and top plate (Inkscape svg)
+   - it's easier to make own mods
+- included bill of material and links (for orientation) [here](sources_bom/readme.md)
+- included marlin-config (for orientation) 
+- included redesign of bottom and top plate (Inkscape svg) [here](sources_inkscape/readme.md)
 - more space under the printer (there is just USB and power coming out of mine)
    - this design allows shorter wires to the motors and results in better EMC
    - shock absorbing standoffs (if printed with soft PLA)
