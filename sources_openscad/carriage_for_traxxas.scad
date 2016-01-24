@@ -13,12 +13,14 @@ TODO:
 */
 
 carriage_height       = 24;
-carriage_extra_height = 24;
+carriage_extra_height = 25; // >=24 and zip-tie-tunnels get added
 carriage_hinge_offset = 22.5;
 belt_mount_offset     = 8; // "outer" side as reference
 
 width  = 76;
-height = carriage_height;
+heightL = carriage_height;
+heightH = carriage_height + carriage_extra_height;
+
 
 offset = 25;
 cutout = 13;
@@ -93,7 +95,7 @@ module belt_mount()
 {
     difference() 
     {
-        translate([0, 5, 0]) cube([4, 19, height], center=true);
+        translate([0, 5, 0]) cube([4, 19, heightL], center=true);
         // belt-grooves  
         for (x = [-2,2]) for (z = [-10:2:+10])
             translate([x,6,z]) rotate([90,0,0]) cylinder(d=1.0, h=10, center=true);
@@ -107,25 +109,30 @@ module carriage()
 {
     hExt = carriage_extra_height;
     for (x = [-30, 30])
-        translate([x, 0, hExt/2]) lm8uu_mount(d=15.2, h=height+hExt);
-    translate([belt_mount_offset-2, 0, 0]) belt_mount();
+        translate([x, 0, 0]) lm8uu_mount(d=15.2, h=heightH);
+    translate([belt_mount_offset-2, 0, -hExt/2]) belt_mount();
     difference() 
     {
         union() 
         {
-            translate([0, -5.6, 0]) cube([50, 5, height], center=true);
-            translate([0, -carriage_hinge_offset, -height/2+4]) parallel_joints(16);
+            translate([0, -5.6, 0]) cube([50, 5, heightH], center=true);
+            translate([0, -carriage_hinge_offset, -heightH/2+4]) parallel_joints(16);
         }
         
         // Pocket for Magnet --> top endstop sensor.
-        translate([-15, -16, -height/2+6])  cylinder(d=3.3, h=15, center=true);
+        translate([-15, -16, -heightH/2+6])  cylinder(d=3.3, h=15, center=true);
+        // cutout on top of middle-structure
+        translate([0,0,3+heightH/2]) scale([43,1,2*hExt]) rotate([90,0,0]) cylinder(d=1,h=30, center=true);
+        
         for (x = [-30, 30]) 
         {
             // cutout for lm8uu_mount;
-            translate([x, 0, 0]) cylinder(r=9, h=height+1, center=true);
-            // Zip tie tunnels. TODO: inner or outer zipties --> inner
+            translate([x, 0, 0]) cylinder(r=9, h=heightH+1, center=true);
+            // Zip tie tunnels.
             for (z = [-8, +8])
-                translate([x, 0, z]) cylinder(r=13, h=3.5, center=true);
+                translate([x, 0, -hExt/2 + z]) cylinder(r=13, h=3.5, center=true);
+            if (hExt >= 24) for (z = [-8, +8])
+                translate([x, 0, +hExt/2 + z]) cylinder(r=13, h=3.5, center=true);
         }
     }
 }
