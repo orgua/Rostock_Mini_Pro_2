@@ -4,23 +4,34 @@ This file is just for debug and shows the parts of the linear drive compiled in 
 
 */
 
-r=180; // rotate affected parts one half turn
+length_rod      = 500; // mm
+height_carriage = 350; //mm
 
-$fn=48;
-
+use <motor_end_standoff.scad>
 use <motor_end.scad>
 use <carriage_for_traxxas.scad>
 use <idler_end.scad>
 
-// printed parts
-translate([0,0,-30]) rotate([0,r,0]) motor_end();
-translate([0,0,+12]) rotate([0,r,r]) carriage();
-translate([0,0,+60]) rotate([0,r,0]) idler_end();
+$fn=24;
 
-// rod
-translate([+30,0,0]) cylinder(d=8, h=200, center=true);
-translate([-30,0,0]) cylinder(d=8, h=200, center=true);
+module drive_with_carriage(lr=length_rod,hc=height_carriage)
+{
+    r=180; // rotate affected parts one half turn
+    
+    // printed parts
+    translate([0,0,42]) rotate([0,r,0]) motor_end();
+    translate([0,0,hc]) rotate([0,r,r]) carriage();
+    translate([0,0,lr]) rotate([0,r,0]) idler_end();
 
-// linear bearing
-translate([+30,0,12]) cylinder(d=15, h=24, center=true);
-translate([-30,0,12]) cylinder(d=15, h=24, center=true);
+    for (x = [-30,+30])
+    {
+        // motor end standoff
+        translate([x,0,0]) motor_end_standoff();
+        // rod
+        translate([x,0,lr/2]) cylinder(d=8, h=lr, center=true);
+        // linear bearing
+        translate([x,0,hc+12]) cylinder(d=15, h=24, center=true);
+    }
+}
+
+drive_with_carriage();
