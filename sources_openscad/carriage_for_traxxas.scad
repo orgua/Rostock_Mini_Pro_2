@@ -7,9 +7,10 @@ Improvement:
 - groves secure belt-mount 
 - move belt-mount to defined distance from middle (reduce error) --> belt_mount_offset
 - allow two lm8uu per rod (extra stability) --> carriage_extra_height
+- zip-tie hold the "new" lm8uu
 
 TODO: 
-- zip-tie hold the "new" lm8uu 
+- 
 */
 
 carriage_height       = 24;

@@ -17,7 +17,8 @@ motor_mounting_screw_distance = 31;
 
 printable_without_support     = false;
 
-part_extraheight = 0;
+part_extraheight_top    =  1; // between motor and bottom-plate
+part_extraheight_bottom = 12; // between motor and base
 
 $fn=36;
 
@@ -50,9 +51,11 @@ module motor_holes()
 
 module motor_end() 
 {
-    hf = motor_front_dimension;
-    hm = motor_front_dimension + part_extraheight;
-    wr = rod_distance;
+    hf  = motor_front_dimension;
+    heb = part_extraheight_bottom;
+    het = part_extraheight_top;
+    hm  = motor_front_dimension + heb + het;
+    wr  = rod_distance;
 
     difference() 
     {
@@ -62,8 +65,8 @@ module motor_end()
             translate([+wr/2,10,0]) diagonal_fin2(35, 7, 40, 30, 5);
             translate([-wr/2,10,0]) diagonal_fin2(35, 7, 40, 30, 5);
         }
-        translate([0,8,hf/2]) rotate([90,0,0]) motor_holes();
-        for (z=[8,21,34]) for (i=[-1,1])
+        translate([0,8,hf/2+het]) rotate([90,0,0]) motor_holes();
+        for (z=[8:13:(hm-7)]) for (i=[-1,1])
             translate([i*(wr/2-6),-6, z]) rotate([0,i*90,0]) rotate([0,0,30]) screw_M3(25);
     }
 }
